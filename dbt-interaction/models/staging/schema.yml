@@ -78,7 +78,7 @@ models:
               A numeric code signifying how the passenger paid for the trip.
             tests: 
               - accepted_values:
-                  values: "{{ var('payment_type_values', [1, 2, 3, 4, 5, 6]) }}"
+                  values: "{{ var('payment_type_values') }}"
                   severity: warn
                   quote: false
           - name: payment_type_description
