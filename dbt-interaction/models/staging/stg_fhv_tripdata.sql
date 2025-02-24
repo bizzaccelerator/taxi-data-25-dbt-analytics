@@ -5,8 +5,8 @@
 }}
 
 with tripdata as (
-    select *
-    from {{ source("staging","fhv_taxi_25_non_partition")}}
+    select *,
+    from {{ source('staging','fhv_taxi_25_non_partition')}}
     where dispatching_base_num is not null
 )
 
