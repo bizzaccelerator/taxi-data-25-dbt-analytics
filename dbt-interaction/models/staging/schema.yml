@@ -8,7 +8,8 @@ sources:
     tables:
       - name: green_taxi_25_non_partition
       - name: yellow_taxi_25_non_partition
-         # freshness:
+      - name: fhv_taxi_25_non_partition
+      # freshness:
            # error_after: {count: 6, period: hour} 
   
 models:
@@ -207,7 +208,7 @@ models:
           description: identifier for dispatching place.
         - name: pickup_datetime 
           description: The date and time when the meter was engaged.
-        - name: dropoff_datetime 
+        - name: dropOff_datetime 
           description: The date and time when the meter was disengaged.
         - name: pulocationid
           description: locationid where the meter was engaged.
@@ -216,7 +217,7 @@ models:
                 to: ref('taxi_zone_lookup')
                 field: locationid
                 severity: warn
-        - name: dropoff_locationid 
+        - name: dolocationid 
           description: locationid where the meter was engaged.
           tests:
             - relationships:
